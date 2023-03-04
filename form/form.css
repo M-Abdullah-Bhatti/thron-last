@@ -36,7 +36,7 @@
   border: 0.5px solid #999898;
 }
 
-.form__container form button {
+.form__container form .btn {
   margin-top: 2vmin;
   margin-bottom: 8vmin;
   padding: 1.8vmin;
@@ -86,7 +86,7 @@
     margin-bottom: 4vmin;
     font-size: 15px;
   }
-  .form__container form button {
+  .form__container form .btn {
     margin-top: 4vmin;
     margin-bottom: 15vmin;
     padding: 2.5vmin;

